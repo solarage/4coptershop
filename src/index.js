@@ -6,14 +6,14 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { createBrowserHistory } from 'history';
+import { createHashHistory } from 'history';
 import { connectRouter, ConnectedRouter, routerMiddleware } from 'connected-react-router';
 
 import App from './App';
 
 import reducers from 'reducers';
 
-const history = createBrowserHistory();
+const history = createHashHistory();
 
 const store = createStore(connectRouter(history)(reducers), 
     composeWithDevTools(
