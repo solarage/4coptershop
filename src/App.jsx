@@ -4,6 +4,7 @@ import './App.css';
 
 import Layout from 'containers/Layout';
 import Quadcopter from 'containers/Quadcopter';
+import Basket from 'containers/Basket';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
         <Route exact path="/" component={Layout} />
         <Route path="/categories/:id" component={Layout} />
         <Route path="/quadcopters/:id" component={Quadcopter} />
+        <Route path="/basket" component={Basket} />
       </div>
     );
   }
